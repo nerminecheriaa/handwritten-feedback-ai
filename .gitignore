@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Generated files
+backend/outputs/
+
+# Local uploaded images
+backend/uploads/
+
+# IDE
+.vscode/
+.idea/
