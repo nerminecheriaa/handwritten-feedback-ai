@@ -11,10 +11,20 @@ Category = Literal[
     "Other",
 ]
 
+Sentiment = Literal[
+    "positive",
+    "negative",
+]
+
 
 class Expectation(BaseModel):
+
     category: Category = Field(
         description="Category of the student's expectation."
+    )
+
+    sentiment: Sentiment = Field(
+        description="Whether the expectation is positive or negative."
     )
 
     text: str = Field(
@@ -23,6 +33,7 @@ class Expectation(BaseModel):
 
 
 class ClassificationResult(BaseModel):
+
     expectations: List[Expectation] = Field(
-        description="List of expectations explicitly expressed by the student."
+        description="List of expectations expressed by the student."
     )
